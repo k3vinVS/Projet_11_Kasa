@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import APropos from "./pages/APropos";
 import Logement from "./pages/Logement";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components//header/Header";
+import Footer from "./components/footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,12 +1,13 @@
 import React from "react";
-import BodyPicture from "../components/BodyPicture";
-import '../styles/home.css'
+import Body from "../components/body/BodyPicture";
+import "../styles/homePage/home.css";
+import Gallery from "../components/body/Gallery";
 
 const Home = () => {
   return (
     <div className="body">
-      <h1>Accueil</h1>
-      <BodyPicture />
+      <Body />
+      <Gallery />
     </div>
   );
 };
