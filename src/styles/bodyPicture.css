@@ -2,21 +2,19 @@
   width: 1240px;
   height: 223px;
   border-radius: 25px;
-  /* background: url(../assets/body_picture.png) center/cover; */
-  /* display: flex;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assets/body_picture.png) center/cover;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  /* opacity: 30%; */
-  /* background: rgba(0, 0, 0, 0.3); */
-  /* mix-blend-mode: darken; */
+  align-items: center;
 }
-
+/* 
 .banniere img {
   width: 1240px;
   height: 223px;
   border-radius: 25px;
   object-fit: cover;
-}
+} */
 
 .banniere p {
   width: 705px;
@@ -25,7 +23,7 @@
   font-weight: 500;
   line-height: 68.45px;
   color: white;
-  position: relative;
+  /* position: relative;
   top: -150px;
-  left: 250px;
+  left: 250px; */
 }
