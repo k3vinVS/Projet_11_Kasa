@@ -1,0 +1,42 @@
+.header {
+  max-width: 1240px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 45px;
+}
+
+.header img {
+  width: 210.32px;
+  height: 68px;
+}
+
+nav {
+  width: 309px;
+  height: 34px;
+  display: flex;
+  gap: 57px;
+}
+
+.lien {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+}
+
+.lien:first-child {
+  width: 136px;
+}
+
+.lien:last-child {
+  width: 116px;
+}
+
+.lien:hover {
+  text-decoration: underline;
+}
