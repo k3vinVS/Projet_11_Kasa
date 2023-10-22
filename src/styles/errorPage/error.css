@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 139px;
+}
+
+.container h1 {
+  width: 597px;
+  height: 263px;
+  font-size: 288px;
+  font-weight: 700;
+  line-height: 410.69px;
+}
+
+.container p {
+  width: 872px;
+  height: 51px;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+}
+
+.accueil {
+  width: 284px;
+  height: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+}
