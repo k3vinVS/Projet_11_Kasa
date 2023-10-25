@@ -1,13 +1,16 @@
 .container {
+  width: 100%;
+  height: 896px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 139px;
+  margin-bottom: 139px;
 }
 
 .container h1 {
-  width: 597px;
+  max-width: 597px;
   height: 263px;
   font-size: 288px;
   font-weight: 700;
@@ -15,7 +18,7 @@
 }
 
 .container p {
-  width: 872px;
+  max-width: 872px;
   height: 51px;
   font-size: 36px;
   font-weight: 500;

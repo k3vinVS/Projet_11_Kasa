@@ -1,20 +1,32 @@
-.banniere {
+.banniere_home {
   width: 1240px;
-  height: 223px;
+  min-height: 223px;
   border-radius: 25px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../../../assets/body_picture.png) center/cover;
+    url(../../../assets/body_picture_home.png) center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.banniere p {
+.banniere_home p {
   width: 705px;
   height: 68px;
   font-size: 48px;
   font-weight: 500;
   line-height: 68.45px;
   color: white;
+  text-align: center;
+}
 
+.banniere_aPropos {
+  width: 1240px;
+  height: 223px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../../assets/body_picture_aPropos.png) center/cover;
+}
+
+.banniere_aPropos p {
+  display: none;
 }

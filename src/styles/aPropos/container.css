@@ -1,6 +1,7 @@
-.body {
-  max-width: 1240px;
-  height: 1095px;
+.container {
+  width: 1240px;
+  height: auto;
+  /* height: 1095px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

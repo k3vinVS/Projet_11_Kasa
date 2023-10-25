@@ -1,9 +1,13 @@
 import React from "react";
+import BodyPicture from "../components/body/BodyPicture";
+import Collapse from "../components/body/Collapse";
+// import "../styles/aPropos/container.css";
 
 const APropos = () => {
   return (
-    <div>
-      <h1>A PROPOS</h1>
+    <div className="container">
+      <BodyPicture />
+      <Collapse />
     </div>
   );
 };

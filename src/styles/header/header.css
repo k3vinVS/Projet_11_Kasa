@@ -5,16 +5,16 @@
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  padding-top: 45px;
+  padding: 45px;
 }
 
 .header img {
-  width: 210.32px;
+  max-width: 210.32px;
   height: 68px;
 }
 
 nav {
-  width: 309px;
+  max-width: 309px;
   height: 34px;
   display: flex;
   gap: 57px;
