@@ -7,7 +7,6 @@ const BodyPicture = () => {
     window.location.href === "http://localhost:3000/"
       ? "banniere_home"
       : "banniere_aPropos";
-  // console.log(bannerValue);
   return (
     <div className={bannerValue}>
       <p>Chez vous, partout et ailleurs</p>
