@@ -1,0 +1,7 @@
+.carrousel_container img{
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  /* background: url(../../assets/body_picture_aPropos.png) center/cover; */
+  object-fit: cover;
+}

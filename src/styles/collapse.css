@@ -1,0 +1,129 @@
+.collapse_container {
+  width: 1023px;
+  height: 100%;
+  max-height: 13rem;
+  overflow: hidden;
+}
+
+.collapse {
+  max-width: 993px;
+  min-width: 552px;
+  height: 32px;
+  border-radius: 10px;
+  background-color: #ff6060;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+  position: relative;
+  z-index: 99;
+}
+
+.closeArrow {
+  cursor: pointer;
+  animation: closeRotation 0.5s ease;
+}
+
+.openArrow {
+  cursor: pointer;
+  animation: openRotation 0.5s ease;
+}
+
+.frame_closed {
+  width: 100%;
+  height: auto;
+  /* max-height: 0; */
+  /* padding-top: 52px; */
+  position: relative;
+  top: -143px;
+  /* top: -93px; */
+  border-radius: 10px 10px 5px 5px;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: closeContent 1s ease-out;
+  /* border: 1px solid blue; */
+}
+
+.frame_unclosed {
+  display: flex;
+}
+
+.frame_open {
+  min-width: 582px;
+  max-width: 1023px;
+  height: auto;
+  /* max-height: 0; */
+  padding-top: 52px;
+  position: relative;
+  top: -52px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #f6f6f6;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: openContent 0.5s ease-out;
+}
+
+.frame_open p,
+.frame_closed p {
+  width: 100%;
+  min-width: 534px;
+  height: 100%;
+  padding: 20px;
+  /* position: relative; */
+  top: 77px;
+  left: 20px;
+  /* border: 1px solid red; */
+}
+
+.equipments_elements {
+  list-style: none;
+}
+
+/* ------------------- ARROW ANIMATION ------------------- */
+@keyframes openRotation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes closeRotation {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* -------------------  CONTENT ANIMATION ------------------- */
+@keyframes openContent {
+  0% {
+    transform: translateY(-143px);
+    /* transform: translateY(-91px); */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes closeContent {
+  0% {
+    transform: translateY(143px);
+  }
+  100% {
+    transform: translateY(-52px);
+  }
+}
