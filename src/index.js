@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { DataProvider } from "./components/utils/data";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import APropos from "./pages/APropos";
@@ -14,16 +13,14 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <DataProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/a_propos" element={<APropos />}></Route>
-          <Route path="/logement" element={<Logement />}></Route>
-          <Route path="*" element={<Error />}></Route>:
-        </Routes>
-        <Footer />
-      </DataProvider>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/a_propos" element={<APropos />}></Route>
+        <Route path="/logement" element={<Logement />}></Route>
+        <Route path="*" element={<Error />}></Route>:
+      </Routes>
+      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );
