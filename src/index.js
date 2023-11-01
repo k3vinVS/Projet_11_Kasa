@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import APropos from "./pages/APropos";
 import Logement from "./pages/Logement";
-import Header from "./components//header/Header";
+// import Header from "./components//header/Header";
 import Footer from "./components/footer/Footer";
 import "./styles/index.css";
 
@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/a_propos" element={<APropos />}></Route>

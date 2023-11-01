@@ -5,50 +5,54 @@ import starActive from "../assets/star-active.svg";
 import starInactive from "../assets/star-inactive.svg";
 import Collapse from "../components/utils/Collapse";
 import "../styles/logement/logement.css";
+import Header from "../components/header/Header";
 
 const Logement = () => {
   // const [data, setData] = useState(url);
 
   return (
-    <div className="logement_container">
-      <Carrousel />
-      {url.slice(0, 1).map((logement) => (
-        <div key={logement.id}>
-          <div className="description">
-            <div className="description-header">
-              <div className="description_title">
-                <h1>{logement.title}</h1>
-                <span>{logement.location}</span>
+    <>
+      <Header />
+      <div className="logement_container">
+        <Carrousel />
+        {url.slice(0, 1).map((logement) => (
+          <div key={logement.id}>
+            <div className="description">
+              <div className="description-header">
+                <div className="description_title">
+                  <h1>{logement.title}</h1>
+                  <span>{logement.location}</span>
+                </div>
+                <div className="description_host">
+                  <span className="description_host-name">
+                    {logement.host.name}
+                  </span>
+                  <img src={logement.host.picture} alt="portrait de l'hôte" />
+                </div>
               </div>
-              <div className="description_host">
-                <span className="description_host-name">
-                  {logement.host.name}
+              <div className="description-footer">
+                <div className="description-footer_tag">
+                  <span className="tag">Batignolle</span>
+                  <span className="tag">Montmartre</span>
+                </div>
+                <span className="rate">
+                  <img src={starActive} alt="étoile active" />
+                  <img src={starInactive} alt="étoile non active" />
                 </span>
-                <img src={logement.host.picture} alt="portrait de l'hôte" />
               </div>
             </div>
-            <div className="description-footer">
-              <div className="description-footer_tag">
-                <span className="tag">Batignolle</span>
-                <span className="tag">Montmartre</span>
-              </div>
-              <span className="rate">
-                <img src={starActive} alt="étoile active" />
-                <img src={starInactive} alt="étoile non active" />
-              </span>
+            <div className="details">
+              <Collapse
+                logement={logement}
+                title="Description"
+                content={logement.description}
+              />
+              <Collapse logement={logement} title="Equipements" />
             </div>
           </div>
-          <div className="details">
-            <Collapse
-              logement={logement}
-              title="Description"
-              content={logement.description}
-            />
-            <Collapse logement={logement} title="Equipements" />
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 

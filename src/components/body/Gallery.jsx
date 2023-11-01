@@ -9,11 +9,11 @@ import url from "../../datas/logements.json";
 const Gallery = () => {
   // const [data, setData] = useState(url);
 
-  useEffect(() => {
-    fetch("/datas/logements.json")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("/datas/logements.json")
+  //     .then((response) => response.json())
+  //     .then((data) => console.log(data));
+  // }, []);
 
   return (
     <div className="gallery">

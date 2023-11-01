@@ -2,6 +2,8 @@ import React from "react";
 import BodyPicture from "../components/body/BodyPicture";
 import Collapse from "../components/utils/Collapse";
 import "../styles/aPropos/aPropos_container.css";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 
 const APropos = ({ logement, index }) => {
   const fiability =
@@ -12,33 +14,36 @@ const APropos = ({ logement, index }) => {
     "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.";
 
   return (
-    <div className="aPropos_container">
-      <BodyPicture />
-      <Collapse
-        key={index}
-        logement={logement}
-        title="Fiabilité"
-        content={fiability}
-      />
-      <Collapse
-        key={index}
-        logement={logement}
-        title="Respect"
-        content={respectService}
-      />
-      <Collapse
-        key={index}
-        logement={logement}
-        title="Service"
-        content={respectService}
-      />
-      <Collapse
-        key={index}
-        logement={logement}
-        title="Sécurité"
-        content={security}
-      />
-    </div>
+    <>
+      <Header />
+      <div className="aPropos_container">
+        <BodyPicture />
+        <Collapse
+          key={index}
+          logement={logement}
+          title="Fiabilité"
+          content={fiability}
+        />
+        <Collapse
+          key={index}
+          logement={logement}
+          title="Respect"
+          content={respectService}
+        />
+        <Collapse
+          key={index}
+          logement={logement}
+          title="Service"
+          content={respectService}
+        />
+        <Collapse
+          key={index}
+          logement={logement}
+          title="Sécurité"
+          content={security}
+        />
+      </div>
+    </>
   );
 };
 
