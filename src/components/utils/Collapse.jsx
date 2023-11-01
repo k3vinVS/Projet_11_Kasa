@@ -6,7 +6,7 @@ import "../../styles/collapse.css";
 
 const Collapse = ({ logement, title, content, index }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isEquip, setIsEquip] = useState("Equipements");
+  // const [isEquip, setIsEquip] = useState("Equipements");
   // const [data, setData] = useState(url);
 
   return !isOpen ? (
@@ -36,7 +36,7 @@ const Collapse = ({ logement, title, content, index }) => {
         />
       </div>
       <div className="frame_open">
-        {isEquip === title ? (
+        {title === "Equipements" ? (
           <p>
             {logement.equipments.map((el, index) => (
               <li key={index} className="equipments_elements">
