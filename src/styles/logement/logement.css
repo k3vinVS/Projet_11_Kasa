@@ -89,9 +89,11 @@
 
 .details {
   width: 1240px;
-  min-height: 52px;
-  /* border: 1px solid green; */
+  height: auto;
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  margin-top: 1rem;
+  /* min-height: 52px; */
+  /* border: 1px solid green; */
 }

@@ -6,6 +6,7 @@ import "../../styles/collapse.css";
 
 const Collapse = ({ logement, title, content, index }) => {
   const [isOpen, setIsOpen] = useState(false);
+  // const [isClosed, setIsClosed] = useState(true);
   // const [isEquip, setIsEquip] = useState("Equipements");
   // const [data, setData] = useState(url);
 
