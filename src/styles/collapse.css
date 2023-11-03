@@ -33,11 +33,8 @@
 .frame_closed {
   width: 100%;
   height: auto;
-  /* max-height: 0; */
-  /* padding-top: 52px; */
   position: relative;
   top: -143px;
-  /* top: -93px; */
   border-radius: 10px 10px 5px 5px;
   background-color: #f6f6f6;
   font-size: 18px;
@@ -48,6 +45,8 @@
   align-items: center;
   margin-top: -5rem;
   transition: 0.8s;
+  /* top: -93px; */
+  /* padding-top: 52px; */
   /* animation: closeContent 1s ease-out; */
 }
 

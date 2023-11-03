@@ -22,7 +22,17 @@ const Collapse = ({ logement, title, content, index }) => {
         />
       </div>
       <div className="frame_closed">
-        <p>{content}</p>
+        {title === "Equipements" ? (
+          <p>
+            {logement.equipments.map((el, index) => (
+              <li key={index} className="equipments_elements">
+                {el}
+              </li>
+            ))}
+          </p>
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   ) : (
