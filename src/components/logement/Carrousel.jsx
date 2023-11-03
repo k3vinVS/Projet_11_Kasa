@@ -1,11 +1,79 @@
-import React from "react";
-import picture from "../../assets/body_picture_aPropos.png";
+import React, { useEffect, useState } from "react";
+import arrow from "../../assets/arrow_back.svg";
 import "../../styles/logement/carrousel.css";
+// import picture from "../../assets/body_picture_aPropos.png";
 
-const Carrousel = () => {
+const Carrousel = (props) => {
+  // const [isSlide, setIsSlide] = useState("");
+  const { children } = props;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [length, setLength] = useState(children.length);
+  const next = () => {
+    if (currentIndex < length - 1) {
+      setCurrentIndex((prevState) => prevState + 1);
+    }
+  };
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevState) => prevState - 1);
+    }
+  };
+
+  useEffect(() => {
+    setLength(children.length);
+  }, [children]);
+
+  // return (
+  //   <div className="carrousel_container">
+  //     {/* <img className="carrousel" src={picture} alt="carrousel" /> */}
+  //     <img
+  //       className="arrow_left"
+  //       src={arrow}
+  //       alt="flèche de navigation"
+  //       onClick={() => setIsSlide()}
+  //     />
+  //     <img
+  //       className="arrow_right"
+  //       src={arrow}
+  //       alt="flèche de navigation"
+  //       onClick={() => setIsSlide("a droite")}
+  //     />
+  //   </div>
+  // );
   return (
-    <div className="carrousel_container">
-      <img className="carrousel" src={picture} alt="carrousel" />
+    <div className="carousel-container">
+      <div className="carousel-wrapper">
+        {currentIndex > 0 && (
+          // <button className="left-arrow" onClick={prev}>
+          //   &lt;
+          // </button>
+          <img
+            className="arrow_left"
+            src={arrow}
+            alt="flèche de navigation"
+            onClick={prev}
+          />
+        )}
+        <div className="carousel-content-wrapper">
+          <div
+            className="carousel-content"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {children}
+          </div>
+        </div>
+        {currentIndex < length - 1 && (
+          // <button className="right-arrow" onClick={next}>
+          //   &gt;
+          // </button>
+          <img
+            className="arrow_right"
+            src={arrow}
+            alt="flèche de navigation"
+            onClick={next}
+          />
+        )}
+      </div>
     </div>
   );
 };

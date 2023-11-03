@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Carrousel from "../components/logement/Carrousel";
 import url from "../datas/logements.json";
 import starActive from "../assets/star-active.svg";
 import starInactive from "../assets/star-inactive.svg";
 import Collapse from "../components/utils/Collapse";
-import "../styles/logement/logement.css";
 import Header from "../components/header/Header";
+import "../styles/logement/logement.css";
 
 const Logement = () => {
   // const [data, setData] = useState(url);
@@ -14,7 +14,15 @@ const Logement = () => {
     <>
       <Header />
       <div className="logement_container">
-        <Carrousel />
+        <Carrousel>
+          {url.map((logement) => (
+            // console.log(logement.pictures[0])
+            <img src={logement.pictures[0]} alt="logement" key={logement.id} />
+            // <img src={logement.pictures[1]} alt="logement" />
+            // <img src={logement.pictures[2]} alt="logement" />
+            // <img src={logement.pictures[3]} alt="logement" />
+          ))}
+        </Carrousel>
         {url.slice(0, 1).map((logement) => (
           <div key={logement.id}>
             <div className="description">

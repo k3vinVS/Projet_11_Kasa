@@ -1,9 +1,8 @@
 import React from "react";
 import BodyPicture from "../components/body/BodyPicture";
 import Collapse from "../components/utils/Collapse";
-import "../styles/aPropos/aPropos_container.css";
 import Header from "../components/header/Header";
-import Footer from "../components/footer/Footer";
+import "../styles/aPropos/aPropos_container.css";
 
 const APropos = ({ logement, index }) => {
   const fiability =

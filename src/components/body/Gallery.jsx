@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../../styles/homePage/body/gallery.css";
 import { Link } from "react-router-dom";
 import url from "../../datas/logements.json";
@@ -7,12 +7,13 @@ import url from "../../datas/logements.json";
 // console.log(url);
 
 const Gallery = () => {
-  // const [data, setData] = useState(url);
+  // const [data, setData] = useState([]);
 
   // useEffect(() => {
-  //   fetch("/datas/logements.json")
-  //     .then((response) => response.json())
-  //     .then((data) => console.log(data));
+  //   fetch("../../datas/logements.json")
+  //     .then((response) => console.log(response))
+  //     .then((data) => setData(data))
+  //     .catch((error) => console.log(error));
   // }, []);
 
   return (
