@@ -1,12 +1,12 @@
 import React from "react";
 import "../../styles/homePage/body/gallery.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import url from "../../datas/logements.json";
 
 // console.log(url.forEach((el) => console.log(el.title))); // Titre de chaque logement
 // console.log(url);
 
-const Gallery = () => {
+const Gallery = ({ logement }) => {
   // const [data, setData] = useState([]);
 
   // useEffect(() => {
@@ -21,7 +21,7 @@ const Gallery = () => {
       {url.map((logement) => {
         return (
           // Utiliser le Link comme composant pour la suite -----
-          <Link to={`./logement/`} key={logement.id}>
+          <Link to={`./logement/?${logement.id}`} key={logement.id}>
             <div className="location">
               <img
                 className="cover"
