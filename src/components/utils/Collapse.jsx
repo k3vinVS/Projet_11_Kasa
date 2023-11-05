@@ -4,7 +4,7 @@ import arrowDown from "../../assets/Vector_down.png";
 import "../../styles/collapse.css";
 // import url from "../../datas/logements.json";
 
-const Collapse = ({ logement, title, content, index }) => {
+const Collapse = ({ title, content, equipments, index }) => {
   const [isOpen, setIsOpen] = useState(false);
   // const [isClosed, setIsClosed] = useState(true);
   // const [isEquip, setIsEquip] = useState("Equipements");
@@ -24,7 +24,7 @@ const Collapse = ({ logement, title, content, index }) => {
       <div className="frame_closed">
         {title === "Equipements" ? (
           <p>
-            {logement.equipments.map((el, index) => (
+            {equipments.map((el, index) => (
               <li key={index} className="equipments_elements">
                 {el}
               </li>
@@ -49,7 +49,7 @@ const Collapse = ({ logement, title, content, index }) => {
       <div className="frame_open">
         {title === "Equipements" ? (
           <p>
-            {logement.equipments.map((el, index) => (
+            {equipments.map((el, index) => (
               <li key={index} className="equipments_elements">
                 {el}
               </li>

@@ -26,62 +26,71 @@ const Logement = () => {
     <>
       <Header />
       <div className="logement_container">
+        {/* ----------- CARROUSEL ----------- */}
         <Carrousel>
           {url[0].pictures.map((picture) => (
             // console.log(logement.pictures[0])
-            <img
-              src={picture}
-              alt="logement"
-              key={picture}
-            />
-            // <img src={logement.pictures[1]} alt="logement" />
-            // <img src={logement.pictures[2]} alt="logement" />
-            // <img src={logement.pictures[3]} alt="logement" />
+            <img src={picture} alt="logement" key={picture} />
           ))}
         </Carrousel>
-        {url.map((logement) => (
-          <div key={logement.id}>
-            <div className="description">
-              <div className="description-header">
-                <div className="description_title">
-                  <h1>{logement.title}</h1>
-                  <span>{logement.location}</span>
+
+        {/* ----------- DESCRIPTION ----------- */}
+        {url.map(
+          ({
+            id,
+            title,
+            location,
+            host,
+            tags,
+            rating,
+            equipments,
+            description,
+          }) => (
+            <div key={id}>
+              <div className="description">
+                <div className="description-header">
+                  <div className="description_title">
+                    <h1>{title}</h1>
+                    <span>{location}</span>
+                  </div>
+                  <div className="description_host">
+                    <span className="description_host-name">{host.name}</span>
+                    <img src={host.picture} alt="portrait de l'hôte" />
+                  </div>
                 </div>
-                <div className="description_host">
-                  <span className="description_host-name">
-                    {logement.host.name}
-                  </span>
-                  <img src={logement.host.picture} alt="portrait de l'hôte" />
+                <div className="description-footer">
+                  <div className="description-footer_tag">
+                    {tags.map((tag) => (
+                      <span className="tag" key={tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* ----------- RATING STARS ----------- */}
+                  <div className="rate">
+                    {[...Array(5)].slice(5 - rating).map((star) => (
+                      <img alt="étoile" src={starActive} key={star} />
+                    ))}
+                    {[...Array(5)].slice(rating).map((star) => (
+                      <img alt="étoile" src={starInactive} key={star} />
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="description-footer">
-                <div className="description-footer_tag">
-                  {logement.tags.map((tag) => (
-                    <span className="tag" key={tag}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="rate">
-                  {[...Array(5)].slice(5 - logement.rating).map((star) => (
-                    <img alt="étoile" src={starActive} key={star} />
-                  ))}
-                  {[...Array(5)].slice(logement.rating).map((star) => (
-                    <img alt="étoile" src={starInactive} key={star} />
-                  ))}
-                </div>
+
+              {/* ----------- COLLAPSE ----------- */}
+              <div className="details">
+                <Collapse
+                  title="Description"
+                  content={description}
+                  description={description}
+                />
+                <Collapse title="Equipements" equipments={equipments} />
               </div>
             </div>
-            <div className="details">
-              <Collapse
-                logement={logement}
-                title="Description"
-                content={logement.description}
-              />
-              <Collapse logement={logement} title="Equipements" />
-            </div>
-          </div>
-        ))}
+          )
+        )}
       </div>
     </>
   );
