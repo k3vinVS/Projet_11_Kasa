@@ -21,21 +21,18 @@ import "../styles/logement/logement.css";
 const Logement = () => {
   // const [data, setData] = useState(url);
   // const [isNbStar, setIsNbStar] = useState(0);
-  // const fullStars = Array(5).fill("❤️");
-  // const emptyStars = Array(5).fill("🩶");
-  // console.log(emptyStars);
 
   return (
     <>
       <Header />
       <div className="logement_container">
         <Carrousel>
-          {url.map((logement) => (
+          {url[0].pictures.map((picture) => (
             // console.log(logement.pictures[0])
             <img
-              src={logement.pictures[0]}
+              src={picture}
               alt="logement"
-              key={logement.picture}
+              key={picture}
             />
             // <img src={logement.pictures[1]} alt="logement" />
             // <img src={logement.pictures[2]} alt="logement" />
@@ -66,12 +63,6 @@ const Logement = () => {
                   ))}
                 </div>
                 <div className="rate">
-                  {/* {fullStars.slice(5 - url[1].rating).map((fullStar, index) => (
-                    <span key={index}>{fullStar}</span>
-                  ))}
-                  {emptyStars.slice(url[1].rating).map((emptyStar, index) => (
-                    <span key={index}>{emptyStar}</span>
-                  ))} */}
                   {[...Array(5)].slice(5 - logement.rating).map((star) => (
                     <img alt="étoile" src={starActive} key={star} />
                   ))}
