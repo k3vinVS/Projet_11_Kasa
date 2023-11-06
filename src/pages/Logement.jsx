@@ -1,96 +1,88 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import Header from "../components/header/Header";
 import Carrousel from "../components/logement/Carrousel";
-import url from "../datas/logements.json";
 import starActive from "../assets/star-active.svg";
 import starInactive from "../assets/star-inactive.svg";
 import Collapse from "../components/utils/Collapse";
-import Header from "../components/header/Header";
 import "../styles/logement/logement.css";
-
-// function numberOfStar() {
-//   for (let i = 0; i < url.length; i++) {
-//     const nbStar = url[i].rating;
-//     if (nbStar > 3) {
-//       // nbStar = { starActive };
-//       console.log(nbStar );
-//     }
-//   }
-// }
-// numberOfStar();
+// import logements from "../datas/logements.json";
 
 const Logement = () => {
-  // const [data, setData] = useState(url);
-  // const [isNbStar, setIsNbStar] = useState(0);
+  const [data, setData] = useState(null);
+  const { id } = useParams();
+
+
+  useEffect(() => {
+    fetch("../logements.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const logement = data.find((logement) => logement.id === id);
+        setData(logement);
+      })
+      .catch(console.error);
+  }, [id]);
+
+  if (data === null) return <div>Loading...</div>;
+  // console.log(data[0].pictures);
 
   return (
     <>
       <Header />
-      <div className="logement_container">
+      {/* ----------- LOGEMENT CONTAINER ----------- */}
+      <div className="logement_container" key={data.id}>
+        selected flat: {JSON.stringify(data)}
         {/* ----------- CARROUSEL ----------- */}
         <Carrousel>
-          {url[0].pictures.map((picture) => (
+          {data.pictures.map((picture) => (
             // console.log(logement.pictures[0])
             <img src={picture} alt="logement" key={picture} />
           ))}
         </Carrousel>
-
         {/* ----------- DESCRIPTION ----------- */}
-        {url.map(
-          ({
-            id,
-            title,
-            location,
-            host,
-            tags,
-            rating,
-            equipments,
-            description,
-          }) => (
-            <div key={id}>
-              <div className="description">
-                <div className="description-header">
-                  <div className="description_title">
-                    <h1>{title}</h1>
-                    <span>{location}</span>
-                  </div>
-                  <div className="description_host">
-                    <span className="description_host-name">{host.name}</span>
-                    <img src={host.picture} alt="portrait de l'hôte" />
-                  </div>
-                </div>
-                <div className="description-footer">
-                  <div className="description-footer_tag">
-                    {tags.map((tag) => (
-                      <span className="tag" key={tag}>
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* ----------- RATING STARS ----------- */}
-                  <div className="rate">
-                    {[...Array(5)].slice(5 - rating).map((star) => (
-                      <img alt="étoile" src={starActive} key={star} />
-                    ))}
-                    {[...Array(5)].slice(rating).map((star) => (
-                      <img alt="étoile" src={starInactive} key={star} />
-                    ))}
-                  </div>
-                </div>
+        <div key={data.id}>
+          <div className="description">
+            <div className="description-header">
+              <div className="description_title">
+                <h1>{data.title}</h1>
+                <span>{data.location}</span>
               </div>
-
-              {/* ----------- COLLAPSE ----------- */}
-              <div className="details">
-                <Collapse
-                  title="Description"
-                  content={description}
-                  description={description}
-                />
-                <Collapse title="Equipements" equipments={equipments} />
+              <div className="description_host">
+                <span className="description_host-name">{data.host.name}</span>
+                <img src={data.host.picture} alt="portrait de l'hôte" />
               </div>
             </div>
-          )
-        )}
+            <div className="description-footer">
+              <div className="description-footer_tag">
+                {data.tags.map((tag) => (
+                  <span className="tag" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* ----------- RATING STARS ----------- */}
+              <div className="rate">
+                {[...Array(5)].slice(5 - data.rating).map((index) => (
+                  <img alt="étoile" src={starActive} key={index} />
+                ))}
+                {[...Array(5)].slice(data.rating).map((index) => (
+                  <img alt="étoile" src={starInactive} key={index} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ----------- COLLAPSE ----------- */}
+          <div className="details">
+            <Collapse
+              title="Description"
+              content={data.description}
+              description={data.description}
+            />
+            <Collapse title="Equipements" equipments={data.equipments} />
+          </div>
+        </div>
       </div>
     </>
   );
