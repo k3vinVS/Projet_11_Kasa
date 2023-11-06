@@ -12,7 +12,6 @@ const Logement = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
 
-
   useEffect(() => {
     fetch("../logements.json")
       .then((res) => res.json())
@@ -26,12 +25,13 @@ const Logement = () => {
   if (data === null) return <div>Loading...</div>;
   // console.log(data[0].pictures);
 
+  const stars = [1, 2, 3, 4, 5];
+
   return (
     <>
       <Header />
       {/* ----------- LOGEMENT CONTAINER ----------- */}
       <div className="logement_container" key={data.id}>
-        selected flat: {JSON.stringify(data)}
         {/* ----------- CARROUSEL ----------- */}
         <Carrousel>
           {data.pictures.map((picture) => (
@@ -63,11 +63,18 @@ const Logement = () => {
 
               {/* ----------- RATING STARS ----------- */}
               <div className="rate">
-                {[...Array(5)].slice(5 - data.rating).map((index) => (
-                  <img alt="étoile" src={starActive} key={index} />
+                {/* {[...Array(5)].slice(5 - data.rating).map((index) => (
+                  <img alt="étoile" src={starActive} key={index * 10 + 1} />
                 ))}
                 {[...Array(5)].slice(data.rating).map((index) => (
-                  <img alt="étoile" src={starInactive} key={index} />
+                  <img alt="étoile" src={starInactive} key={index * 20 + 2} />
+                ))} */}
+                {stars.map((index, star) => (
+                  <img
+                    alt="étoile"
+                    src={data.rating > star ? starActive : starInactive}
+                    key={index}
+                  />
                 ))}
               </div>
             </div>

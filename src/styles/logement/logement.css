@@ -99,3 +99,10 @@
   /* min-height: 52px; */
   /* border: 1px solid green; */
 }
+
+.star-active{
+  background-image: url(../../assets/star-active.svg);
+}
+.star-inactive{
+  background-image: url(../../assets/star-inactive.svg);
+}

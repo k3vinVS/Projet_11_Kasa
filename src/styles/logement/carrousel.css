@@ -24,6 +24,7 @@
   transition: all 250ms linear;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  filter: brightness(0.9);
 }
 
 .carousel-content::-webkit-scrollbar {
