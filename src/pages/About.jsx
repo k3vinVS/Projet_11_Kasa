@@ -2,9 +2,9 @@ import React from "react";
 import BodyPicture from "../components/body/BodyPicture";
 import Collapse from "../components/utils/Collapse";
 import Header from "../components/header/Header";
-import "../styles/aPropos/aPropos_container.css";
+import "../styles/about/about.css";
 
-const APropos = ({ logement, index }) => {
+const About = ({ logement, index }) => {
   const fiability =
     "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.";
   const respectService =
@@ -15,7 +15,7 @@ const APropos = ({ logement, index }) => {
   return (
     <>
       <Header />
-      <div className="aPropos_container">
+      <div className="about_container">
         <BodyPicture />
         <Collapse
           key={index}
@@ -46,4 +46,4 @@ const APropos = ({ logement, index }) => {
   );
 };
 
-export default APropos;
+export default About;

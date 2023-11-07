@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import "../../styles/header/header.css";
 
 const Header = () => {
   const homeLinkValue = window.location.href === "http://localhost:3000/";
-  const aProposLinkValue =
+  const aboutLinkValue =
     window.location.href === "http://localhost:3000/a_propos";
-  const otherLinkValue = homeLinkValue || aProposLinkValue;
+  const otherLinkValue = homeLinkValue || aboutLinkValue;
 
   return (
     <div className="header">
@@ -27,7 +27,7 @@ const Header = () => {
           </Link>
         </nav>
       )}
-      {aProposLinkValue && (
+      {aboutLinkValue && (
         <nav>
           <Link to="/" className="lien" style={{ textDecoration: "none" }}>
             Accueil

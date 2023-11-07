@@ -19,14 +19,14 @@
   text-align: center;
 }
 
-.banniere_aPropos {
+.banniere_about {
   width: 1240px;
   height: 223px;
   border-radius: 25px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../../../assets/body_picture_aPropos.png) center/cover;
+  background: url(../../../assets/body_picture_about.png) center/cover;
+  filter: brightness(0.9);
 }
 
-.banniere_aPropos p {
+.banniere_about p {
   display: none;
 }

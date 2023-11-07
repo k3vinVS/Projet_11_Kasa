@@ -34,7 +34,11 @@ const Carrousel = (props) => {
             onClick={prev}
           />
         )}
+
         <div className="carousel-content-wrapper">
+          <span className="picture_counter">
+            {currentIndex + 1}/{children.length}
+          </span>
           <div
             className="carousel-content"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
