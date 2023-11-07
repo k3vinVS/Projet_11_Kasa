@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import arrow from "../../assets/arrow_back.svg";
 import "../../styles/logement/carrousel.css";
-// import picture from "../../assets/body_picture_aPropos.png";
 
 const Carrousel = (props) => {
   // const [isSlide, setIsSlide] = useState("");
