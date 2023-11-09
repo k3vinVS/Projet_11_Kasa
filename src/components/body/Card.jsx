@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/homePage/body/gallery.css";
+import "../../styles/homePage/body/card.css";
 import { Link } from "react-router-dom";
 
-const Gallery = () => {
+const Card = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="gallery">
+    <div className="card">
       {/* ---------------- LOGEMENT ---------------- */}
       {data.map((logement) => (
         <Link to={`./logement/${logement.id}`} key={logement.id}>
@@ -31,4 +31,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Card;

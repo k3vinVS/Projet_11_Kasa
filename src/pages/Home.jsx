@@ -1,6 +1,6 @@
 import React from "react";
 import BodyPicture from "../components/body/BodyPicture";
-import Gallery from "../components/body/Gallery";
+import Card from "../components/body/Card";
 import "../styles/homePage/home_container.css";
 import Header from "../components/header/Header";
 
@@ -10,7 +10,7 @@ const Home = () => {
       <Header />
       <div className="home_container">
         <BodyPicture />
-        <Gallery />
+        <Card />
       </div>
     </>
   );
