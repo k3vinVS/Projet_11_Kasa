@@ -10,11 +10,15 @@ const Carrousel = (props) => {
   const next = () => {
     if (currentIndex < length - 1) {
       setCurrentIndex((prevState) => prevState + 1);
+    } else {
+      setCurrentIndex((prevState) => prevState - length + 1);
     }
   };
   const prev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevState) => prevState - 1);
+    } else {
+      setCurrentIndex((prevState) => prevState + (length - 1));
     }
   };
 
@@ -25,14 +29,14 @@ const Carrousel = (props) => {
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        {currentIndex > 0 && (
+        {length !== 1 ? (
           <img
             className="arrow_left"
             src={arrow}
             alt="flèche de navigation"
             onClick={prev}
           />
-        )}
+        ) : null}
 
         <div className="carousel-content-wrapper">
           <span className="picture_counter">
@@ -45,34 +49,17 @@ const Carrousel = (props) => {
             {children}
           </div>
         </div>
-        {currentIndex < length - 1 && (
+        {length !== 1 ? (
           <img
             className="arrow_right"
             src={arrow}
             alt="flèche de navigation"
             onClick={next}
           />
-        )}
+        ) : null}
       </div>
     </div>
   );
-  // return (
-  //   <div className="carrousel_container">
-  //     {/* <img className="carrousel" src={picture} alt="carrousel" /> */}
-  //     <img
-  //       className="arrow_left"
-  //       src={arrow}
-  //       alt="flèche de navigation"
-  //       onClick={() => setIsSlide()}
-  //     />
-  //     <img
-  //       className="arrow_right"
-  //       src={arrow}
-  //       alt="flèche de navigation"
-  //       onClick={() => setIsSlide("a droite")}
-  //     />
-  //   </div>
-  // );
 };
 
 export default Carrousel;
