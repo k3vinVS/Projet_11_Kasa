@@ -1,53 +1,82 @@
 .header {
-  max-width: 1240px;
-  height: 68px;
+  max-width: 77.5rem;
+  height: 4.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 2.81rem;
   margin: auto;
-  padding: 45px;
+  margin-bottom: 3.12rem;
 }
 
 .header img {
-  max-width: 210.32px;
-  height: 68px;
+  max-width: 13.15rem;
+  height: 4.25rem;
 }
 
 nav {
-  max-width: 309px;
-  height: 34px;
+  max-width: 19.3rem;
+  height: 2.13rem;
   display: flex;
-  gap: 57px;
+  gap: 3.56rem;
 }
 
 .lien {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 34.22px;
-  display: flex;
-  justify-content: flex-end;
+  line-height: 142.6%;
+  text-align: right;
   text-decoration: none;
-  /* text-decoration: underline; */
 }
 
 .lien:first-child {
-  width: 136px;
+  width: 8.5rem;
 }
 
 .lien:last-child {
-  width: 116px;
+  width: 7.25rem;
 }
 
 .lien:hover {
   text-decoration: underline;
 }
-/* 
-.underline_content {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 34.22px;
-  display: flex;
-  justify-content: flex-end;
-  text-decoration: none;
-  text-decoration: underline;
-} */
+
+@media screen and (max-width: 375px) {
+  .header {
+    max-width: 20.9rem;
+    height: 2.93rem;
+    padding: 1.25rem 1.5rem 0 1.5rem;
+    margin-bottom: 1.69rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .header img {
+    max-width: 9.06rem;
+    height: 2.93rem;
+    flex-shrink: 0;
+  }
+
+  nav {
+    max-width: 11.87rem;
+    height: 1.06rem;
+    gap: 1.62rem;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex: 1 0 0;
+
+  }
+
+  .lien {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .lien:first-child {
+    width: 3.44rem;
+  }
+
+  .lien:last-child {
+    width: 4.13rem;
+  }
+}

@@ -1,7 +1,7 @@
 .banniere_home {
-  width: 1240px;
-  min-height: 223px;
-  border-radius: 25px;
+  max-width: 77.5rem;
+  height: 13.9rem;
+  border-radius: 1.56rem;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../../../assets/body_picture_home.png) center/cover;
   display: flex;
@@ -10,23 +10,39 @@
 }
 
 .banniere_home p {
-  width: 705px;
-  height: 68px;
-  font-size: 48px;
+  width: 44.06rem;
+  height: 4.25rem;
+  font-size: 3rem;
   font-weight: 500;
-  line-height: 68.45px;
+  line-height: 142.6%;
   color: white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banniere_about {
-  width: 1240px;
-  height: 223px;
-  border-radius: 25px;
+  width: 77.5rem;
+  height: 13.9rem;
+  border-radius: 1.56rem;
   background: url(../../../assets/body_picture_about.png) center/cover;
   filter: brightness(0.9);
 }
 
 .banniere_about p {
   display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .banniere_home {
+    max-width: 20.9rem;
+    max-height: 6.94rem;
+  }
+
+  .banniere_home p {
+    width: 13.5625rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    line-height: 100%;
+  }
 }

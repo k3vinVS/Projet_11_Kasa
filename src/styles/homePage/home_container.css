@@ -1,11 +1,12 @@
 .home_container {
-  width: 1240px;
-  min-height: 1095px;
-  margin: 3rem auto;
-  /* height: auto; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
+  max-width: 77.5rem;
+  min-height: 68.4rem;
+  margin: auto;
+  /* padding: 2.81rem; */
 }
 
+@media screen and (max-width: 375px) {
+  .home_container {
+    padding: 1.25rem;
+  }
+}
