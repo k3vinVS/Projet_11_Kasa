@@ -1,6 +1,5 @@
 import React from "react";
-import "../../styles/homePage/body/bodyPicture.css";
-// import "../../styles/aPropos/body/bodyPicture.css";
+import "../../styles/bodyPicture.css";
 
 const BodyPicture = () => {
   const bannerValue =

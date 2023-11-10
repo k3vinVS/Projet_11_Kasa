@@ -1,5 +1,5 @@
 import React from "react";
-import BodyPicture from "../components/body/BodyPicture";
+import BodyPicture from "../components/utils/BodyPicture";
 import Collapse from "../components/utils/Collapse";
 import Header from "../components/header/Header";
 import "../styles/about/about.css";

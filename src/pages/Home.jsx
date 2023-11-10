@@ -1,8 +1,8 @@
 import React from "react";
-import BodyPicture from "../components/body/BodyPicture";
+import BodyPicture from "../components/utils/BodyPicture";
 import Card from "../components/body/Card";
-import "../styles/homePage/home_container.css";
 import Header from "../components/header/Header";
+import "../styles/homePage/home_container.css";
 
 const Home = () => {
   return (
