@@ -2,6 +2,7 @@
   max-width: 77.5rem;
   min-height: 68.4rem;
   margin: auto;
+  margin-bottom: 3.12rem;
   /* padding: 2.81rem; */
 }
 
@@ -11,7 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem;
+    padding: 0 1.25rem;
+    margin-bottom: 1.69rem;
   }
 }
 
@@ -21,12 +23,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
+    margin-bottom: 1.69rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
   .home_container {
     width: 93%;
+    /* margin-bottom: 1.69rem; */
   }
 }

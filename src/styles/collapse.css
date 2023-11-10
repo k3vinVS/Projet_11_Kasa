@@ -7,6 +7,7 @@
 
 .collapse {
   max-width: 993px;
+  width: 100%;
   min-width: 552px;
   height: 32px;
   border-radius: 10px;
@@ -100,6 +101,7 @@
   }
 }
 
+/* ------------------- MEDAI QUERIES ------------------- */
 @keyframes closeRotation {
   0% {
     transform: rotate(-180deg);
@@ -109,20 +111,11 @@
   }
 }
 
-/* -------------------  CONTENT ANIMATION ------------------- */
-/* @keyframes openContent {
-  0% {
-    transform: translateY(-143px);
-  }
-  100% {
-    transform: translateY(0);
+@media screen and (max-width: 378px) {
+  .collapse_container {
+    /* width: 100%; */
+    min-height: 52px;
+    /* max-height: 22rem; */
+    overflow: hidden;
   }
 }
-@keyframes closeContent {
-  0% {
-    transform: translateY(143px);
-  }
-  100% {
-    transform: translateY(-52px);
-  }
-} */
