@@ -38,7 +38,7 @@
   align-items: flex-end;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   .footer_container {
     width: 8.35rem;
     height: 5.31rem;
