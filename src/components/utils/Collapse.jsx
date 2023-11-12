@@ -6,47 +6,26 @@ import "../../styles/collapse.css";
 
 const Collapse = ({ title, content, equipments, index }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [isClosed, setIsClosed] = useState(true);
-  // const [isEquip, setIsEquip] = useState("Equipements");
-  // const [data, setData] = useState(url);
+  const showContent = () => {
+    setIsOpen(!isOpen);
+  };
+  const showContentClass = "content " + (isOpen ? "visible" : "hidden");
 
-  return !isOpen ? (
-    <div className="collapse_container" key={index}>
+  return (
+    <div
+      className="collapse_container"
+      key={index}
+    >
       <div className="collapse">
         {title}
         <img
-          src={arrowUp}
-          className="closeArrow"
+          src={isOpen ? arrowDown : arrowUp}
+          className={isOpen ? "closeArrow" : "openArrow"}
           alt="flèche directionnelle"
-          onClick={() => setIsOpen(true)}
+          onClick={() => showContent()}
         />
       </div>
-      <div className="frame_closed">
-        {title === "Equipements" ? (
-          <p>
-            {equipments.map((el, index) => (
-              <li key={index} className="equipments_elements">
-                {el}
-              </li>
-            ))}
-          </p>
-        ) : (
-          <p>{content}</p>
-        )}
-      </div>
-    </div>
-  ) : (
-    <div className="collapse_container" key={index}>
-      <div className="collapse">
-        {title}
-        <img
-          src={arrowDown}
-          className="openArrow"
-          alt="flèche directionnelle"
-          onClick={() => setIsOpen(false)}
-        />
-      </div>
-      <div className="frame_open">
+      <div className={showContentClass}>
         {title === "Equipements" ? (
           <p>
             {equipments.map((el, index) => (

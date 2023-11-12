@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 1.5rem 2.38rem 1.5rem;
+  margin: auto;
+  padding: 0 1.5rem 2.38rem 1.5rem;
   gap: 2.38rem;
 }
 
