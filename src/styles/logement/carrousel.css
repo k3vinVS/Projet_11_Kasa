@@ -1,14 +1,16 @@
 .carousel-container {
+  max-width: 77.5rem;
   width: 100%;
-  height: 415px;
+  /* max-height: 25.9rem; */
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .carousel-wrapper {
   display: flex;
-  width: 1240px;
-  height: 415px;
+  width: 100%;
+  /* height: 415px; */
   position: relative;
 }
 
@@ -20,6 +22,8 @@
 }
 
 .carousel-content {
+  /* min-height: 15.9rem;
+  max-height: 25.9rem; */
   display: flex;
   transition: all 250ms linear;
   -ms-overflow-style: none;
@@ -33,18 +37,19 @@
 
 .carousel-content > * {
   /* width: 100%; */
-  width: 1240px;
-  height: 415px;
+  width: 100%;
+  max-height: 25.9rem;
   flex-shrink: 0;
   flex-grow: 1;
   object-fit: cover;
 }
 
 .arrow_left {
-  width: 199.64px;
-  height: 96px;
-  left: -52px;
+  width: 7.48rem;
+  height: 6rem;
+  left: -0.69rem;
   position: absolute;
+  flex-shrink: 0;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%) rotate(-90deg);
@@ -52,10 +57,11 @@
 }
 
 .arrow_right {
-  width: 199.64px;
-  height: 96px;
-  right: -52px;
+  width: 7.48rem;
+  height: 6rem;
+  right: -0.69rem;
   position: absolute;
+  flex-shrink: 0;
   z-index: 1;
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
@@ -70,4 +76,32 @@
   z-index: 99;
   bottom: 0;
   left: 50%;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-container {
+    width: 100%;
+    min-width: 20.9rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel-content {
+    height: 15.9rem;
+    max-height: 25.9rem;
+  }
+
+  .arrow_right, .arrow_left {
+    width: 1.5rem;
+    height: 1.5rem;
+    right: 0;
+  }
+  .arrow_left {
+    left: 0;
+  }
+
+  .picture_counter {
+    display: none;
+  }
 }
