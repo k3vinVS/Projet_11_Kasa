@@ -80,11 +80,13 @@
 
 .description-tag {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .tag {
   min-width: 5.25rem;
-  max-width: 7.19rem;
+  /* max-width: 7.19rem; */
   min-height: 1.13rem;
   max-height: 1.56rem;
   border-radius: 0.63rem;
@@ -95,7 +97,7 @@
   line-height: 142.6%;
   flex-shrink: 0;
   text-align: center;
-  margin-right: 0.625rem;
+  /* margin-right: 0.625rem; */
   padding: 0.2rem 1rem;
 }
 
@@ -145,6 +147,7 @@
 
   .description-layout_left {
     gap: 0.5rem;
+    width: 100%;
   }
 
   .description-layout_right {

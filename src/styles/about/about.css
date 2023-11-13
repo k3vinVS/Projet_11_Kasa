@@ -16,18 +16,6 @@
     width: 100%;
     /* min-height: 19.4rem; */
     gap: 1.25rem;
-    padding: 0 1.25rem;
-    margin: 0;
+    padding: 0 1.25rem 1.19rem 1.25rem;
   }
 }
-
-/* @media screen and (max-width: 1024px) {
-  .about_container {
-    max-width: 20.9rem; 
-    width: 100%;
-    min-height: 19.4rem;
-    gap: 1.19rem;
-    padding: 0 1.25rem;
-    margin: 0;
-  }
-} */

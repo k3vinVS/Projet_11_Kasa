@@ -6,11 +6,9 @@ import Collapse from "../components/utils/Collapse";
 import Description from "../components/logement/Description";
 import Error from "./Error";
 import "../styles/logement/logement.css";
-// import Rating from "../components/logement/Rating";
-// import logements from "../datas/logements.json";
 
 const Logement = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState();
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,7 +19,7 @@ const Logement = () => {
         setData(logement);
       })
       .catch(console.error);
-  }, [id]);
+  }, [id, data]);
 
   // Si la page du logement n'est pas bonne -----
   if (!data) return <Error />;
