@@ -12,10 +12,7 @@ const Collapse = ({ title, content, equipments, index }) => {
   const showContentClass = "content " + (isOpen ? "visible" : "hidden");
 
   return (
-    <div
-      className="collapse_container"
-      key={index}
-    >
+    <div className="collapse_container" key={index}>
       <div className="collapse">
         {title}
         <img
