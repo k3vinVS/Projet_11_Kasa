@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import arrowUp from "../../assets/Vector_up.png";
 import arrowDown from "../../assets/Vector_down.png";
-import "../../styles/collapse.css";
-// import url from "../../datas/logements.json";
+import "../../styles/utils/collapse.css";
 
 const Collapse = ({ title, content, equipments, index }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +19,7 @@ const Collapse = ({ title, content, equipments, index }) => {
   }, []);
 
   return (
-    <div className="collapse_container" key={index}>
+    <div className="collapse-container" key={index}>
       <div className="collapse">
         {title}
         <img
@@ -38,7 +37,7 @@ const Collapse = ({ title, content, equipments, index }) => {
         {title === "Equipements" ? (
           <p>
             {equipments.map((el, index) => (
-              <li key={index} className="equipments_elements">
+              <li key={index} className="equipments-elements">
                 {el}
               </li>
             ))}

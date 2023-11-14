@@ -15,7 +15,7 @@ const About = ({ logement, index }) => {
   return (
     <>
       <Header />
-      <div className="about_container">
+      <div className="about-container">
         <BodyPicture />
         <Collapse
           key={index}

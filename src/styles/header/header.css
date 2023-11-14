@@ -41,6 +41,8 @@ nav {
   text-decoration: underline;
 }
 
+/* -------------- MEDIA QUERIES -------------- */
+
 @media screen and (max-width: 378px) {
   .header {
     max-width: 20.9rem;

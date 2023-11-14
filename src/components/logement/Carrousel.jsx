@@ -3,7 +3,6 @@ import arrow from "../../assets/arrow_back.svg";
 import "../../styles/logement/carrousel.css";
 
 const Carrousel = (props) => {
-  // const [isSlide, setIsSlide] = useState("");
   const { children } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [length, setLength] = useState(children.length);
@@ -31,7 +30,7 @@ const Carrousel = (props) => {
       <div className="carousel-wrapper">
         {length !== 1 ? (
           <img
-            className="arrow_left"
+            className="arrow-left"
             src={arrow}
             alt="flèche de navigation"
             onClick={prev}
@@ -39,7 +38,7 @@ const Carrousel = (props) => {
         ) : null}
 
         <div className="carousel-content-wrapper">
-          <span className="picture_counter">
+          <span className="picture-counter">
             {currentIndex + 1}/{children.length}
           </span>
           <div
@@ -51,7 +50,7 @@ const Carrousel = (props) => {
         </div>
         {length !== 1 ? (
           <img
-            className="arrow_right"
+            className="arrow-right"
             src={arrow}
             alt="flèche de navigation"
             onClick={next}

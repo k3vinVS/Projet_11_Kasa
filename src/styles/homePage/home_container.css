@@ -1,13 +1,14 @@
-.home_container {
+.home-container {
   max-width: 77.5rem;
   min-height: 68.4rem;
   margin: auto;
   margin-bottom: 3.12rem;
-  /* padding: 2.81rem; */
 }
 
+/* -------------- MEDIA QUERIES -------------- */
+
 @media screen and (max-width: 378px) {
-  .home_container {
+  .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +19,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .home_container {
+  .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,8 +30,7 @@
 }
 
 @media screen and (min-width: 1025px) {
-  .home_container {
+  .home-container {
     width: 93%;
-    /* margin-bottom: 1.69rem; */
   }
 }

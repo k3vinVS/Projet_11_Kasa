@@ -1,6 +1,5 @@
-.footer {
+.footer-container {
   width: 100%;
-  /* max-width: 1440px; */
   height: 13.1rem;
   position: relative;
   bottom: 0;
@@ -11,7 +10,7 @@
   background-color: black;
 }
 
-.footer_container {
+.footer {
   width: 32.1rem;
   height: 7.13rem;
   display: flex;
@@ -38,8 +37,10 @@
   align-items: flex-end;
 }
 
+/* -------------- MEDIA QUERIES -------------- */
+
 @media screen and (max-width: 480px) {
-  .footer_container {
+  .footer {
     width: 8.35rem;
     height: 5.31rem;
   }

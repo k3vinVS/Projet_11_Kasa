@@ -1,11 +1,11 @@
 import React from "react";
-import "../../styles/bodyPicture.css";
+import "../../styles/utils/bodyPicture.css";
 
 const BodyPicture = () => {
   const bannerValue =
     window.location.href === "http://localhost:3000/"
-      ? "banniere_home"
-      : "banniere_about";
+      ? "banniere-home"
+      : "banniere-about";
   return (
     <div className={bannerValue}>
       <p>Chez vous, partout et ailleurs</p>

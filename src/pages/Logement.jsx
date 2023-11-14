@@ -28,7 +28,7 @@ const Logement = () => {
     <>
       <Header />
       {/* ----------- LOGEMENT CONTAINER ----------- */}
-      <div className="logement_container" key={data.id}>
+      <div className="logement-container" key={data.id}>
         {/* ----------- CARROUSEL ----------- */}
         <Carrousel>
           {data.pictures.map((picture) => (

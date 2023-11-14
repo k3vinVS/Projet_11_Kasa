@@ -48,6 +48,8 @@
   position: absolute;
 }
 
+/* -------------- MEDIA QUERIES -------------- */
+
 @media screen and (max-width: 378px) {
   .card {
     max-width: 20.9rem;

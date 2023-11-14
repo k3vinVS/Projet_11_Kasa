@@ -1,4 +1,4 @@
-.collapse_container {
+.collapse-container {
   max-width: 63.9rem;
   width: 100%;
   overflow: hidden;
@@ -26,7 +26,7 @@
   animation: openRotation 0.5s ease;
 }
 
-.equipments_elements {
+.equipments-elements {
   list-style: none;
 }
 
@@ -37,13 +37,10 @@
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 142.6%;
-  opacity: 1;
   transition: height 0.6s ease-in-out;
 }
 
 .visible {
-  opacity: 1;
-  /* margin-top: -5px; */
   transition: height 0.6s ease-in-out;
 }
 
@@ -61,31 +58,11 @@
   }
 }
 
-/* ------------------- MEDAI QUERIES ------------------- */
 @keyframes closeRotation {
   0% {
     transform: rotate(180deg);
   }
   100% {
     transform: rotate(0deg);
-  }
-}
-
-@media screen and (max-width: 378px) {
-  .frame_closed {
-    /* width: 100%; */
-    height: auto;
-    position: relative;
-    top: -218px;
-    border-radius: 10px 10px 5px 5px;
-    background-color: #f6f6f6;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 25.67px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -5rem;
-    transition: 0.8s;
   }
 }

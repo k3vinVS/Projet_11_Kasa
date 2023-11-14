@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/homePage/body/card.css";
 import { Link } from "react-router-dom";
+import "../../styles/homePage/body/card.css";
 
 const Card = () => {
   const [data, setData] = useState([]);

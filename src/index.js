@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Error from "./pages/Error";
 import About from "./pages/About";
 import Logement from "./pages/Logement";
-// import Header from "./components//header/Header";
 import Footer from "./components/footer/Footer";
 import "./styles/index.css";
 
@@ -13,7 +12,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/a_propos" element={<About />}></Route>
