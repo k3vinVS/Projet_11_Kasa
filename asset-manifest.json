@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Projet_11_Kasa/static/css/main.f2b06fd1.css",
+    "main.js": "/Projet_11_Kasa/static/js/main.6d27b0d5.js",
+    "static/media/body_picture_about.png": "/Projet_11_Kasa/static/media/body_picture_about.8e5138afef8b0728a9c1.png",
+    "static/media/body_picture_home.png": "/Projet_11_Kasa/static/media/body_picture_home.3681acb72f6284423910.png",
+    "static/media/logo.svg": "/Projet_11_Kasa/static/media/logo.a5783b4cef26b8023cc300291492bf29.svg",
+    "static/media/logo_footer.svg": "/Projet_11_Kasa/static/media/logo_footer.d5662e3bdddf67ecc4220bfb3e4bb846.svg",
+    "static/media/star-active.svg": "/Projet_11_Kasa/static/media/star-active.f47de1483d883b69c6210d622f75c05c.svg",
+    "static/media/star-inactive.svg": "/Projet_11_Kasa/static/media/star-inactive.c864407432a61da616f95e669105d42e.svg",
+    "index.html": "/Projet_11_Kasa/index.html",
+    "static/media/arrow_back.svg": "/Projet_11_Kasa/static/media/arrow_back.788b523a93cc707df0c2e312a002ebdb.svg",
+    "main.f2b06fd1.css.map": "/Projet_11_Kasa/static/css/main.f2b06fd1.css.map",
+    "main.6d27b0d5.js.map": "/Projet_11_Kasa/static/js/main.6d27b0d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2b06fd1.css",
+    "static/js/main.6d27b0d5.js"
+  ]
+}
