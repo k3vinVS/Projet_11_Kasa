@@ -38,9 +38,11 @@ const Carrousel = (props) => {
         ) : null}
 
         <div className="carousel-content-wrapper">
-          <span className="picture-counter">
-            {currentIndex + 1}/{children.length}
-          </span>
+          {length !== 1 ? (
+            <span className="picture-counter">
+              {currentIndex + 1}/{children.length}
+            </span>
+          ) : null}
           <div
             className="carousel-content"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -48,6 +50,7 @@ const Carrousel = (props) => {
             {children}
           </div>
         </div>
+
         {length !== 1 ? (
           <img
             className="arrow-right"
