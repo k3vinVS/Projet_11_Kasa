@@ -19,7 +19,7 @@ const Logement = () => {
         setData(logement);
       })
       .catch(console.error);
-  }, [id, data]);
+  }, [id]);
 
   // Si la page du logement n'est pas bonne -----
   if (!data) return <Error />;
