@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Header from "../components/header/Header";
 import Carrousel from "../components/logement/Carrousel";
 import Collapse from "../components/utils/Collapse";
 import Description from "../components/logement/Description";
-import Error from "./Error";
 import "../styles/logement/logement.css";
+import Footer from "../components/footer/Footer";
 
 const Logement = () => {
   const [data, setData] = useState();
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("../logements.json")
@@ -17,12 +18,15 @@ const Logement = () => {
       .then((data) => {
         const logement = data.find((logement) => logement.id === id);
         setData(logement);
+        if (!logement) {
+          navigate("*", { replace: false });
+        }
       })
       .catch(console.error);
-  }, [id]);
+  }, [id, navigate]);
 
-  // Si la page du logement n'est pas bonne -----
-  if (!data) return <Error />;
+  // Chargement de page -----
+  if (!data) return <div>Loading...</div>;
 
   return (
     <>
@@ -51,6 +55,7 @@ const Logement = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

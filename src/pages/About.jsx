@@ -2,6 +2,7 @@ import React from "react";
 import BodyPicture from "../components/utils/BodyPicture";
 import Collapse from "../components/utils/Collapse";
 import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
 import "../styles/about/about.css";
 
 const About = ({ logement, index }) => {
@@ -42,6 +43,7 @@ const About = ({ logement, index }) => {
           content={security}
         />
       </div>
+      <Footer />
     </>
   );
 };

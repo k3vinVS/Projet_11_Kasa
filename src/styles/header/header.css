@@ -21,12 +21,19 @@ nav {
   gap: 3.56rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
 .lien {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 142.6%;
   text-align: right;
-  text-decoration: none;
 }
 
 .lien:first-child {
@@ -35,10 +42,6 @@ nav {
 
 .lien:last-child {
   width: 7.25rem;
-}
-
-.lien:hover {
-  text-decoration: underline;
 }
 
 /* -------------- MEDIA QUERIES -------------- */
