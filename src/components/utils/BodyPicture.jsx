@@ -1,13 +1,14 @@
 import React from "react";
 import "../../styles/utils/bodyPicture.css";
+import { useLocation } from "react-router-dom";
 
 const BodyPicture = () => {
-  const bannerValue =
-    window.location.href === "http://localhost:3000/"
-      ? "banniere-home"
-      : "banniere-about";
+  const location = useLocation();
+
   return (
-    <div className={bannerValue}>
+    <div
+      className={location.pathname === "/" ? "banniere-home" : "banniere-about"}
+    >
       <p>Chez vous, partout et ailleurs</p>
     </div>
   );
